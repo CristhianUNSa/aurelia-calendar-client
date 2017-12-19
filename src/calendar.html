@@ -1,23 +1,37 @@
 <template>
-  <pre>
-      ${busquedaAereoResponse}
-  </pre>
-    <!-- <section class="au-animate">
-      <h2>${heading}</h2>
-      <div class="row au-stagger">
-        <div class="col-sm-6 col-md-3 card-container au-animate" repeat.for="user of users">
-          <div class="card">
-            <canvas class="header-bg" width="250" height="70"></canvas>
-            <div class="avatar">
-              <img src.bind="user.avatar_url" crossorigin ref="image"/>
-            </div>
-            <div class="content">
-              <p class="name">${user.login}</p>
-              <p><a target="_blank" class="btn btn-default">Contact</a></p>
-            </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row" repeat.for="row of calendario">
+          <div class="col-md-4">
+              <div class="row">
+                  <div class="col-md-4"></div> <!-- this column empty -->
+                  <div class="col-md-4">Ida: ${row[0].IdaDeparture.format('DD/MM/YYYY')} Vuelta: ${row[0].VueltaDeparture.format('DD/MM/YYYY')} Precio: ${row[0].ImporteTotal} </div>
+                  <div class="col-md-4"> Ida: ${row[1].IdaDeparture.format('DD/MM/YYYY')} Vuelta: ${row[1].VueltaDeparture.format('DD/MM/YYYY')} Precio: ${row[1].ImporteTotal} </div>
+              </div>
           </div>
-        </div>
+          
+          <div class="col-md-8">
+              <div class="row">
+                  <div class="col-md-2">Ida: ${row[2].IdaDeparture.format('DD/MM/YYYY')} Vuelta: ${row[2].VueltaDeparture.format('DD/MM/YYYY')} Precio: ${row[2].ImporteTotal} </div>
+                  <div class="col-md-2"> Ida: ${row[3].IdaDeparture.format('DD/MM/YYYY')} Vuelta: ${row[3].VueltaDeparture.format('DD/MM/YYYY')} Precio: ${row[3].ImporteTotal} </div>
+                  <div class="col-md-2">Ida: ${row[4].IdaDeparture.format('DD/MM/YYYY')} Vuelta: ${row[4].VueltaDeparture.format('DD/MM/YYYY')} Precio: ${row[4].ImporteTotal}</div>
+                  <div class="col-md-2"> Ida: ${row[5].IdaDeparture.format('DD/MM/YYYY')} Vuelta: ${row[5].VueltaDeparture.format('DD/MM/YYYY')} Precio: ${row[5].ImporteTotal} </div>
+                  <div class="col-md-2"> Ida: ${row[6].IdaDeparture.format('DD/MM/YYYY')} Vuelta: ${row[6].VueltaDeparture.format('DD/MM/YYYY')} Precio: ${row[6].ImporteTotal}</div>
+                  <div class="col-md-2"></div> <!-- this column empty -->
+              </div>
+          </div>
       </div>
-    </section> -->
+    </div>
+    <div>
+      <pre>
+        ${calendarioJson}
+      </pre>
+    </div>
+    <div class="col-md-12">
+        <pre>
+            ${busquedaAereoResponse}
+        </pre>
+    </div>
+  </div>
   </template>
   
